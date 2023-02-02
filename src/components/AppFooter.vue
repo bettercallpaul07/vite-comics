@@ -9,7 +9,12 @@ export default {
 <template>
 
     <footer>
-        FOOTER
+        <div class="h-footer">
+            
+        </div>
+        <div class="l-footer">
+            SIGN UP
+        </div>
     </footer>
 
 
@@ -18,5 +23,20 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+footer {
+
+    .h-footer {
+        background-image: url(../assets/img/footer-bg.jpg);
+        min-height: 40vh;
+    }
+
+    .l-footer {
+        background-color: grey;
+        min-height: 10vh;
+    }
+
+
+    }
 
 </style>
