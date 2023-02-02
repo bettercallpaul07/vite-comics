@@ -9,7 +9,7 @@ export default {
 <template>
 
     <main>
-        MAIN
+        <p>Content goes here</p>
     </main>
 
 

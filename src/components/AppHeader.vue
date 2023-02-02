@@ -27,11 +27,7 @@ export default {
             <li><a href="#">Shop</a></li>
         </ul>
 
-
-
     </header>
-
-
 
 </template>
 
