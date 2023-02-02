@@ -21,7 +21,7 @@ export default {
     section {
         background-color: blue;
         color: white;
-        min-height: 20vh;
+        height: 20vh;
     }
 
 

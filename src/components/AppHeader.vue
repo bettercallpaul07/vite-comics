@@ -11,12 +11,12 @@ export default {
     <header>
 
         <div class="logo">
-            <img src="../assets/img/favicon.ico" alt="">
+            <img src="../assets/img/dc-logo.png" alt="Logo">
         </div>
 
         <ul>
             <li><a href="#">Characters</a></li>
-            <li><a href="#">Comics</a></li>
+            <li class="active"><a href="#">Comics</a></li>
             <li><a href="#">Movies</a></li>
             <li><a href="#">TV</a></li>
             <li><a href="#">Games</a></li>
@@ -36,25 +36,54 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 10vh;
+    height: 10vh;
+
+    .logo {
+        padding: 10px 0px;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
 }
 
 
 ul {
     display: flex;
+    align-items: center;
     list-style: none;
+    height: 100%;
+    
+
 
     li {
-        padding: 5px 10px;
-        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: black;
+        
+        a {
+            text-decoration: none;
+            padding: 0px 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: black;
+        }
+
+        &.active {
+            border-bottom: 3px solid blue;
+            a {
+                color: blue;
+            }
+        }
     }
 }
-
-
-
 </style>

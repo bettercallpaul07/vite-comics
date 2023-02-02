@@ -21,7 +21,7 @@ export default {
 main {
     background-color: black;
     color: white;
-    min-height: 20vh;
+    height: 15vh;
 }
 
 </style>

@@ -10,7 +10,7 @@ export default {
 
     <footer>
         <div class="h-footer">
-            
+
         </div>
         <div class="l-footer">
             SIGN UP
@@ -28,7 +28,9 @@ footer {
 
     .h-footer {
         background-image: url(../assets/img/footer-bg.jpg);
-        min-height: 40vh;
+        min-height: 45vh;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .l-footer {
