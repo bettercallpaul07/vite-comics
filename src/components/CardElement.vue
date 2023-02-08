@@ -4,7 +4,8 @@ export default {
     // Dati dall'esterno
     props: {
         title: String,
-        src: String
+        src: String,
+        series: String,
     },
     // Dati interni
     data() {
@@ -16,7 +17,7 @@ export default {
 </script>
 
 <template>
-    <div class="card">
+    <div class="elem">
 
         <div>
             <img :src="src" :alt="title">
@@ -27,14 +28,18 @@ export default {
         </h4>
 
         <p>
-            {{ message }}
+            {{ series }}
         </p>
 
     </div>
 </template>
 
 <style lang="scss" scoped>
-.card {
+.elem {
+
+    padding: 10px;
+    width: calc(100%/4);
+
     img {
         width: 100%;
     }

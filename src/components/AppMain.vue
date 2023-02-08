@@ -102,10 +102,8 @@ export default {
 
         <div class="cards">
 
-            <CardElement v-for="element in comics" 
-                        class="comic"
-                        :title="element.series"
-                        :src="element.thumb" />
+            <CardElement v-for="element in comics" class="comic" :title="element.series" :src="element.thumb"
+                :series="element.type" />
 
         </div>
 
@@ -118,7 +116,7 @@ export default {
 .container {
     background-color: black;
     color: white;
-    min-height: 70vh;
+    min-height: 900px;
     width: 100%;
     text-align: center;
     display: flex;
@@ -127,20 +125,14 @@ export default {
     padding: 10px 0px;
 
     .cards {
-        width: 100%;
+        width: 70%;
         min-height: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-
-        border: 1px solid rebeccapurple;
         margin: 20px 0px;
 
-        .card {
-            height: 30%;
-            width: calc(100%/4);
-        }
     }
 }
 </style>
