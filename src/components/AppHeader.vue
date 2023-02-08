@@ -2,6 +2,62 @@
 
 export default {
     name: "AppHeader",
+    data() {
+        return {
+            links: [
+                {
+                    label: 'Characters',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Comics',
+                    url: '#',
+                    active: true
+                },
+                {
+                    label: 'Movies',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'TV',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Games',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Collectibles',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Videos',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Fans',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'News',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Shop',
+                    url: '#',
+                    active: false
+                },
+            ]
+        };
+    }
 }
 
 </script>
@@ -15,16 +71,14 @@ export default {
         </div>
 
         <ul>
-            <li><a href="#">Characters</a></li>
-            <li class="active"><a href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Collectibles</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Fans</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Shop</a></li>
+            <li v-for="element in links"
+            :class="{active: element.active == true}">
+                <a :href="element.url">
+                    {{ element.label }}
+
+                </a>
+            </li>
+
         </ul>
 
     </header>
@@ -56,7 +110,7 @@ ul {
     align-items: center;
     list-style: none;
     height: 100%;
-    
+
 
 
     li {
@@ -64,7 +118,7 @@ ul {
         display: flex;
         align-items: center;
         color: black;
-        
+
         a {
             text-decoration: none;
             padding: 0px 10px;
@@ -72,13 +126,17 @@ ul {
             text-transform: uppercase;
             font-weight: bold;
             color: black;
+
         }
 
         &.active {
             border-bottom: 3px solid blue;
+
             a {
                 color: blue;
             }
+
+
         }
     }
 }

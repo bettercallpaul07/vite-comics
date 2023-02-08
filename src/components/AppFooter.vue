@@ -59,7 +59,7 @@ export default {
                     </ul>
                 </div>
             </div>
-            <div class="img-big">
+            <div class="imgbig">
                 <img src="../assets/img/dc-logo-bg.png" alt="">
 
             </div>
@@ -143,16 +143,13 @@ footer {
                 }
             }
 
-            .img-big {
-                width: 100%;
-                height: 100%;
 
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
 
-            }
+        }
+
+        .imgbig img {
+            width: 100%;
+            height: 100%;
 
         }
 
